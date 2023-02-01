@@ -1,5 +1,9 @@
 # datafun-03-datatypes
-
+"""
+Susie Smith
+January 31, 2023
+Domain: Basketball
+"""
 > Practice with Python data types, filter(), map(), and list comprehensions
 
 

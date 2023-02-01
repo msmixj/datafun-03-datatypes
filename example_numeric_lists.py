@@ -75,7 +75,7 @@ xtimes_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 yvalues_list = [2, 5, 8, 20, 21, 23, 24, 27, 30, 31, 31, 32]
 
 # Descriptive: Averages and measures of central tendency
-# Use statisttics module to get mean, median, mode
+# Use statistics module to get mean, median, mode
 # for a values list
 
 mean = statistics.mean(score_list)
@@ -90,13 +90,13 @@ variance = statistics.variance(score_list)
 
 # Descriptive: Measures of correlation
 # Use two numerical lists of the same size
-# Use statisttics module to get correlation between list1 and list2
+# Use statistics module to get correlation between list1 and list2
 
 correlationxy = statistics.correlation(xtimes_list, yvalues_list)
 
 
 # Predictive: Machine Learning - Linear Regression
-# If the corrlation is close to 1.0, then the data is linearly related
+# If the correlation is close to 1.0, then the data is linearly related
 # If so, use statistics module to get linear regression for list1 and list2
 # This is a form of supervised machine learning - it uses all known data
 # Use the slope and intercept and an unknown (future) x to predict a y value
