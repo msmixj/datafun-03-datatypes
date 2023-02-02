@@ -51,7 +51,6 @@ listy = [0,2,5,5,8,11,15,18,22,24,]
 print(listy)
 print()
 print('-------------------------------------------')
-print()
 
 #Lists 1 Statistic functions
 print("Lists 1: Statistics:")
@@ -109,7 +108,7 @@ y_future = ((slope * x_future) + intercept)
 print(f'    The predicted y value at the future time (x = 15) is {round(y_future)}.')
 print()
 print('--------------------------')
-print()
+
 #Lists 3. Lists - Using Python Built-In Functions
 """Using information from List 1, I will calculate
 built-in functions min, max, len, sum, avg, set, sort and sort using reverse order
@@ -139,7 +138,6 @@ print()
 print('-----------------------------')
 #Lists 4. List Methods
 """In this section I will make a new short list and explore list methods."""
-print()
 
 print("Lists 4. List Methods")
 lst = [522, 516, 93, 1030, 729]
@@ -167,7 +165,67 @@ print(f'    4.remove(5), remove the number 5 from the list: {lst}')
 lst.insert(4,2)
 print('    5.count(2) count how many times 2 appears in your list')
 lst.insert(5,2)
-print(f'        Lst: {lst}')
+print(f'        lst: {lst}')
+print(f'        The value 2 appears in lst {lst.count(2)} times.')
+
+#sort lst
+lst.sort()
+print(f'    6.sort() lst: {lst}')
+
+#sort lst in reverse order
+lst.sort(reverse=True)
+print(f'    7.sort(), with reverse: {lst}')
+
+#copy lst
+copied_lst = lst.copy()
+print(f'    8.copy() lst: {copied_lst}')
+
+#pop() the first item off the top of the list/stack
+lst.pop(0)
+print(f'    9.pop() first item off the top of the list: {lst}')
+
+#pop() the last item off the bottom of the list
+lst.pop()
+print(f'    10.pop() last item off the bottom of the list: {lst}')
+print()
+print('---------------------------------')
+
+#Lists 5. List Transformations - Using filter() and map()
+print('Lists 5. List Transformations - Using filter() and map()')
+
+#Using built-in filter function to return list with even numbers only
+list1_filter_even = list(filter(lambda x: x % 2 == 0,list1_roster))
+print(f'    1.Use filter()function to keep x such that x is an even value: {list1_filter_even}')
+
+#Using built-in map function to map each x to cuberoot of x
+cube_list1 = list(map(lambda x: x**3, list1_roster))
+print(f'    2.Use map function to map each x to cuberoot of x: {cube_list1}')
+
+#Using built-in map function to calculate volume of a cube with side equal to value in my list
+volume_list1 = list(map(lambda x: x * x * x, list1_roster))
+print(f'    3.Use map funciton for volume of cube with side equal to value in list: {volume_list1}')
+print()
+
+print('-------------------------------')
+
+#Lists 6. List Transformations - Using List Comprehension
+print("Lists 6. List Transformations - Using List Comprehension")
+
+#Using list comprehension to filter (start within square brackets) to get x (for each item x in list1)
+#if x is less than 4
+list_less4 = [x for x in list1_roster if x < 4]
+print(f'    3.List comprehension filter for list1, to get x if x < 4: {list_less4}')
+#NEED TO COMPLETE THIS SECTION
+
+#Using a list comprehension to triple each value in list1, that is to get x*3(for x in list1)
+list1_triple = [item * 3 for item in list1_roster]
+print(f'    4.Triple each value in list1: {list1_triple}')
+
+#Using a list comprehension to transform my numeric list1 into another numeric list
+list1_transform = [x+1 for x in list1_roster]
+print(f'    5.Transform jersey numbers list to show what numbers are available for \
+new players joining the team: {list1_transform}')
+
 
 
 
