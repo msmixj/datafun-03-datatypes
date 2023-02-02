@@ -134,6 +134,45 @@ print(f'  5.Average of jersey numbers: {round(list1_avg)}')
 print(f'  6.Jersey set {list1_set}')
 print(f'  7.Jersey numbers sorted (Ascending): {list1_sort}')
 print(f'  8.Jersey numbers sorted (Descending): {list1_sort_rev}')
+print()
+
+print('-----------------------------')
+#Lists 4. List Methods
+"""In this section I will make a new short list and explore list methods."""
+print()
+
+print("Lists 4. List Methods")
+lst = [522, 516, 93, 1030, 729]
+print(f'Lst: {lst}') 
+
+#appending a list
+lst.append(620) #created appended list
+print(f'    1.append() a single value to the list:  {lst}')
+
+#extending the list
+lst.extend([112,33])
+print(f'    2.extend() the list with a new list you pass in:  {lst}')
+
+
+#insert at an index, insert a value
+lst.insert(3, 5)
+print(f'    3.insert() at an index, insert a value:  {lst}')
+
+
+#remove(5), remove the number 5 from my list; first add number 5
+lst.remove(5)
+print(f'    4.remove(5), remove the number 5 from the list: {lst}')
+
+#count(2), count how many times 2 appears in your list (if it doesn't change 2 to a value in your list)
+lst.insert(4,2)
+print('    5.count(2) count how many times 2 appears in your list')
+lst.insert(5,2)
+print(f'        Lst: {lst}')
+
+
+
+
+      
 
 
 
