@@ -17,7 +17,7 @@ import math
 import statistics as stats
 
 """Functions will be created for my domain of basketball."""
-print('-----------------------------------------------')
+print('========================================================')
 print('Task 3: Numeric Lists')
 print()
 """
@@ -29,7 +29,7 @@ Create list of total accumulated team points (listy)
 #List1 of players' jersey numbers
 print("List 1 = Player Roster (Jersey Numbers):")
 
-list1_roster = [00, 1, 2, 3, 4, 7, 8, 9, 10, 12, 16, 
+list1_roster = [0, 1, 2, 3, 4, 7, 8, 9, 10, 12, 16, 
               18, 19, 21, 22, 25, 29, 30, 32, 36, 48, 54]
 print("List 1 is the roster of the basketball players' numbers.")
 print(list1_roster)
@@ -49,6 +49,8 @@ print("List y represents 10 measurements of accumulated team points.")
 
 listy = [0,2,5,5,8,11,15,18,22,24,]
 print(listy)
+print()
+print('-------------------------------------------')
 print()
 
 #Lists 1 Statistic functions
@@ -73,6 +75,8 @@ print(f"""    Standard deviation for List 1 = {round(stats.stdev(list1_roster))}
 print(f"""    Variance for List 1 = {round(stats.variance(list1_roster))}
     Variance for List x = {round(stats.variance(listx))}
     Variance for List y = {round(stats.variance(listy))}""")
+print()
+print('----------------------------')
 print()
 
 #Lists 2 Lists - Correlation and Prediction
@@ -103,6 +107,36 @@ print()
 print("  4.Predict the y value at the future time y=mx+b where m is the slope and b is the y intercept")
 y_future = ((slope * x_future) + intercept)
 print(f'    The predicted y value at the future time (x = 15) is {round(y_future)}.')
+print()
+print('--------------------------')
+print()
+#Lists 3. Lists - Using Python Built-In Functions
+"""Using information from List 1, I will calculate
+built-in functions min, max, len, sum, avg, set, sort and sort using reverse order
+"""
+print("Lists 3. Lists - Using Python Built-In Functions")
+
+
+list1_min = min(list1_roster)
+list1_max = max(list1_roster)
+list1_length = len(list1_roster)
+list1_sum = sum(list1_roster)
+list1_avg = list1_sum / list1_length
+list1_set = set(list1_roster)
+list1_sort = sorted(list1_roster)
+list1_sort_rev = sorted(list1_roster, reverse=True)
+
+print(f'  1.Minimum jersey number: {list1_min}')
+print(f'  2.Maximum jersey number: {list1_max}')
+print(f'  3.Player/Jersey count: {list1_length}')
+print(f'  4.Sum of jersey numbers: {list1_sum}')
+print(f'  5.Average of jersey numbers: {round(list1_avg)}')
+print(f'  6.Jersey set {list1_set}')
+print(f'  7.Jersey numbers sorted (Ascending): {list1_sort}')
+print(f'  8.Jersey numbers sorted (Descending): {list1_sort_rev}')
+
+
+
 
 
 # For example, if your domain:
