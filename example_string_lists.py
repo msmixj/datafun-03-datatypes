@@ -1,4 +1,5 @@
 """
+
 Examples of using string lists
 """
 
@@ -40,10 +41,12 @@ with open("text_woodchuck.txt", "r") as fileObject:
 
 # Print the count and list of words
 word_ct = len(list_words)
+print(list_words)
+print(word_ct)
+
 
 # Print the count and list of unique words
 unique_word_ct = len(unique_words)
-
 
 # Create a random sentence
 # e.g. "The angry dog runs quickly."
@@ -51,8 +54,19 @@ sentence = (
     f"The {random.choice(list_adjectives)} {random.choice(list_nouns)} "
     f"{random.choice(list_verbs)} {random.choice(list_adverbs)}."
 )
+sentence2 = (
+    f"The {random.choice(list_adjectives)} {random.choice(list_nouns)} "
+    f"{random.choice(list_verbs)} {random.choice(list_adverbs)}."
+)
+
+sentence3 = (
+    f"The {random.choice(list_adjectives)} {random.choice(list_nouns)} "
+    f"{random.choice(list_verbs)} {random.choice(list_adverbs)}."
+)
 print()
 print(sentence)
+print(sentence2)
+print(sentence3)
 print()
 print("To see more results, add print statements to the code.")
 print("To play a continuous game, modify the code.")
@@ -75,7 +89,7 @@ def get_winner_message(userguess, botguess):
             return "You win!"
 
 
-ready_for_continous_game = False  # change this when ready
+ready_for_continous_game = True  # change this when ready
 
 while True:
     if not ready_for_continous_game:
