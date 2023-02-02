@@ -34,7 +34,6 @@ list1_roster = [00, 1, 2, 3, 4, 7, 8, 9, 10, 12, 16,
 print("List 1 is the roster of the basketball players' numbers.")
 print(list1_roster)
 print()
-print()
 
 #Listx of 10 integer times (using range)
 print("List x = 10 Integer Times")
@@ -57,16 +56,53 @@ print("Lists 1: Statistics:")
 print("  1.Calculate the mean, median, and mode")
 
 #Function and print results of mean, median and mode
-print(f'     Mean for List 1 = {stats.mean(list1_roster)},\
- Mean for List x = {stats.mean(listx)}, Mean for List y = {stats.mean(listy)}')
-print(f'     Median for List 1 = {stats.median(list1_roster)},\
- Median for List x = {stats.median(listx)}, Median for List y = {stats.median(listy)}')
+print(f'     Mean for List 1 = {round(stats.mean(list1_roster))},\
+ Mean for List x = {round(stats.mean(listx))}, Mean for List y = {round(stats.mean(listy))}')
+print(f'     Median for List 1 = {round(stats.median(list1_roster))},\
+ Median for List x = {round(stats.median(listx))}, Median for List y = {round(stats.median(listy))}')
 print(f'     Mode for List 1 = {stats.mode(list1_roster)},\
  Mode for List x = {stats.mode(listx)}, Mode for List y = {stats.mode(listy)}')
 print()
 
-#Lists 2 standard deviation and variance
+
+#Function and print results of standard deviation and variance
 print("  2.Calculate the standard deviation and variance")
+print(f"""    Standard deviation for List 1 = {round(stats.stdev(list1_roster))}
+    Standard deviation for List x = {round(stats.stdev(listx))}
+    Standard deviation for List y = {round(stats.stdev(listy))}""")
+print(f"""    Variance for List 1 = {round(stats.variance(list1_roster))}
+    Variance for List x = {round(stats.variance(listx))}
+    Variance for List y = {round(stats.variance(listy))}""")
+print()
+
+#Lists 2 Lists - Correlation and Prediction
+print("Lists 2. Lists - Correlation and Prediction")
+
+#Correlation and prediction
+print("  1.Calculate the correlation between List x and List y")
+
+#Return results here
+print(f'    Correlation between List x and List y = {stats.correlation(listx, listy):.2f}')
+print()
+
+#Slope and intercept of best fit line
+print("  2.Calculate the slope and intercept of the best fit line.")
+slope, intercept = (stats.linear_regression(listx, listy))
+
+#Return results here
+print(f'    Slope and intercept of the best fit line is {round(slope)} and {round(intercept)}, respectively.')
+slope, intercept = (stats.linear_regression(listx, listy))
+print()
+
+#Set a future time = 15
+print("  3.Set a future time = 15")
+x_future = 15
+print()
+
+#Predict y value at future time 
+print("  4.Predict the y value at the future time y=mx+b where m is the slope and b is the y intercept")
+y_future = ((slope * x_future) + intercept)
+print(f'    The predicted y value at the future time (x = 15) is {round(y_future)}.')
 
 
 # For example, if your domain:
