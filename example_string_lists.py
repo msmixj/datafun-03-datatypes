@@ -48,6 +48,7 @@ print(word_ct)
 # Print the count and list of unique words
 unique_word_ct = len(unique_words)
 
+
 # Create a random sentence
 # e.g. "The angry dog runs quickly."
 sentence = (

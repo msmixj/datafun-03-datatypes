@@ -4,6 +4,7 @@ January 31, 2023
 Data Analytics Fundamentals Project 3
 Domain: Basketball
 
+
 The goal of this project is to make use of common data structures
 and their usages.
 In this project, I will be using lists, tuples, dictionaries, and sets.
