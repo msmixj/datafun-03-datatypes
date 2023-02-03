@@ -45,6 +45,7 @@ last = team_tuple[-1]
 print()
 print(f'The total points scored in the first game was {first}')
 print(f'The total points scored in the last game was {last}')
+print()
 
 # Use tuples to return multiple values from a function
 
@@ -57,112 +58,53 @@ def divide_and_remainder(dividend, divisor):
 q, r = divide_and_remainder(10, 3)
 print(f"Quotient: {q}, Remainder: {r}")
 
-
+print('--------------------------------------')
 """
-
-
 SETS .......................................................    
 
-
-A set is an unordered collection of unique elements.
-A set is created using curly braces.
-Sets can use the same methods as lists and tuples.
-Sets support the following operations:
-
-Membership testing (using the in and not in operators)
-Element addition (using the add method)
-Element removal (using the remove and discard methods)
-Set union (using the union method or the | operator)
-Set intersection (using the intersection method or the & operator)
-Set difference (using the difference method or the - operator)
-Set symmetric difference (using the symmetric_difference method or ^ operator)
-
-
 """
+print('Sets')
 
-
-setA = {1, 2, 3, 4, 5}
-setB = {4, 5, 6, 7, 8}
+TeamA = {2, 4, 6, 8, 10}
+TeamB = {1, 2, 3, 4, 5, 6}
 
 # set union
-setC = setA | setB
+TeamC = TeamA | TeamB
+print(TeamC)
 
 # set intersection
-setD = setA & setB
+TeamD = TeamA & TeamB
+print(TeamD)
 
 # set difference
-setE = setA - setB
+TeamE = TeamA - TeamB
+print(TeamE)
 
 # sets are often used to remove duplicates from a list
 # after gettin the set, convert it back to a list with list() or []
-listWords = ["apple", "banana", "apple", "pear", "banana", "orange"]
+
+listWords = ["basketball", "hoop", "defense", "offense", "free throw", "jump ball"]
 setWords = set(listWords)
 listWordsNoDuplicates = list(setWords)
 listWordsNoDuplicates = [setWords]  # same as above
 
 
-"""
+print('------------------------------------')
+print('Dictionaries')
 
-
-DICTIONARIES .......................................................    
-
-A dictionary is an unordered collection of key-value pairs.
-A dictionary is created using curly braces.
-A dictionary is accessed using keys, not indexes.
-A dictionary is mutable, so you can add, remove, and change values.
-A dictionary is iterable, so you can use it in a for loop.
-A dictionary is not ordered, so you can't slice to access a range of values.
-
-Dictionaries support the following operations:
-
-Indexing: access the value associated with a key in the dictionary. 
-For example: dogA['name'].
-
-Membership testing: use 'in' and 'not in' operators 
-to test whether a key is in the dictionary. 
-For example: 'name' in dogA.
-
-Adding and updating items: use indexing to add a new key-value pair,
-or to update the value associated with an existing key. 
-For example: dogA['age'] = 2.
-
-Removing items: Use the del statement to remove a key-value pair. 
-For example: del dogA['weight_kg'].
-
-Iteration: You can use a for loop to iterate over the 
-keys, values, or key-value pairs in a dictionary. 
-For example: for key in dogA: print(key)
-
-Dictionaries are a lot like 
-JSON objects - a common data format used in web development.
-
-"""
-
-
-dogA_dict = {"name": "Rex", "age": 2, "weight_kg": 13.4}
-dogB_dict = {"name": "Fido", "age": 3, "weight_kg": 15.2}
+playerA_dict = {"name": "Cora", "number": 4, "ppg": 13}
+playerB_dict = {"name": "Elle", "number": 23, "ppg": 15}
 
 assessment_dict = {"low": 0, "medium": 1, "high": 2}
 
 data_dict = {
-    "name": ["Alice", "Bob", "Charlie", "David"],
-    "age": [25, 30, 35, 40],
-    "income": [50000, 60000, 70000, 80000],
+    "name": ["Cora", "Elle", "Jordyn", "Kinley"],
+    "points": [10, 15, 13, 7],
+    "rebounds": [4, 5, 2, 3],
 }
+print(data_dict)
 
-
-# Define your PyBuddies in a dictionary
-# With few chnages, you could read in many PyBuddies from a JSON file.
-
-
-# In data anlytics, dictionaries are used to store and manipulate
-# tabular data, e.g. from database records or Excel rows.
-
-
-# Dictionaries can be used to store and aggregate statistical data,
-# such as counts or sums. For example, a dictionary of word-count pairs.
-
-with open("text_simple.txt") as file_object:
+with open("text_woodchuck.txt") as file_object:
     word_list = file_object.read().split()
 
 word_counts_dict = {}
@@ -171,6 +113,7 @@ for word in word_list:
         word_counts_dict[word] += 1
     else:
         word_counts_dict[word] = 1
+print()
 
 print(word_counts_dict)
 
